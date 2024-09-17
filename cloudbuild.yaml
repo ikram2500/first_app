@@ -1,6 +1,5 @@
 steps:
 - name: 'gcr.io/cloud-builders/gcloud'
-  args: ['build', '-t', 'gcr.io/inbound-study-435703-d/first_app', '.']
+  args: ['build', '-t', 'gcr.io/inbound-study-435703-d1/first_app', '.']
 - name: 'gcr.io/cloud-builders/docker'
-  args: ['push', 'gcr.io/inbound-study-435703-d/first_app'] 
-  
+  args: ['push', 'gcr.io/inbound-study-435703-d1/first_app'] 
