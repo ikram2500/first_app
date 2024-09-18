@@ -5,7 +5,7 @@ ENV PYTHON_ENV=$PYTHON_ENV
 
 COPY requirements.txt set_python_env.sh /requirements.txt/
 
-RUN bash ./requirements/set_python_env.sh $PYTHON_ENV
+RUN bash ./requirements.txt/set_python_env.sh $PYTHON_ENV
 
 RUN apt-get update && \
     apt-get install -y \
