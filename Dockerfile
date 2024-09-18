@@ -1,8 +1,23 @@
 FROM python:3.8-slim 
 
-COPY requirements.txt .
+ARG PYTHON_ENV=my_env
+ENV PYTHON_ENV=$PYTHON_ENV
 
-RUN pip install -r requirements.txt  
+COPY requirements.txt set_python_env.sh /requirements/
+
+RUN bash ./requirements/set_python_env.sh $PYTHON_ENV
+
+RUN apt-get update && \
+    apt-get install -y \
+    vim \
+    && apt update
+
+
+#COPY requirements.txt .
+
+#RUN pip install -r requirements.txt  
+
+RUN pip install --upgrade pip
 
 RUN mkdir -p app 
 
