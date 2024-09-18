@@ -3,7 +3,7 @@ FROM python:3.8-slim
 ARG PYTHON_ENV=my_env
 ENV PYTHON_ENV=$PYTHON_ENV
 
-COPY requirements.txt set_python_env.sh /requirements.txt/
+COPY requirements.txt . set_python_env.sh /requirements.txt/
 
 RUN bash ./requirements.txt/set_python_env.sh $PYTHON_ENV
 
