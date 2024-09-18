@@ -47,4 +47,4 @@ def get_iris():
 
     fig.savefig("iris.png")
     file = open("iris.png", "rb")
-    return StreamingResponse(file, media_type="image/png")
+    return StreamingResponse(file, media_type="image/png") 
